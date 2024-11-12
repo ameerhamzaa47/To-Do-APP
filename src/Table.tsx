@@ -6,10 +6,10 @@ function Table() {
 
   return (
     <>
-      <table className="mx-4 my-10 md:w-96 md:ml-[29%] border-separate border-spacing-y-3">
+      <table className="mx-4 my-10 border-separate border-spacing-y-3">
         {taskList.map((item, index) => (
           <tbody key={index}>
-            <tr className={`${item.checked ? 'bg-red-300' : 'bg-blue-200'}`}>
+            <tr className={`${item.checked ? 'bg-red-300' : 'bg-blue-200'} flex justify-center items-center`}>
               <td className="p-2 min-w-56 md:min-w-96 md:max-w-96 ">
                 <input type="checkbox" onClick={() => toggleTaskChecked(index)} className={`mx-2 my-4`} checked={item.checked}/>
                 <span className={`${item.checked ? 'line-through' : ''}`}>{item.task}</span>
