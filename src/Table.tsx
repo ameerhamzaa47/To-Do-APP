@@ -10,9 +10,9 @@ function Table() {
         {taskList.map((item, index) => (
           <tbody key={index}>
             <tr className={`${item.checked ? 'bg-red-300' : 'bg-blue-200'} flex justify-center items-center`}>
-              <td className="p-2 min-w-64 md:min-w-96 md:max-w-96 ">
+              <td className="p-2 min-w-64 max-w-64 md:min-w-96 md:max-w-96">
                 <input type="checkbox" onClick={() => toggleTaskChecked(index)} className={`mx-2 my-4`} checked={item.checked}/>
-                <span className={`${item.checked ? 'line-through' : ''}`}>{item.task}</span>
+                <p className={`${item.checked ? 'line-through' : ''} break-words whitespace-normal`}>{item.task}</p>
               </td>
               <td className="px-3 py-2 flex md:flex-row">
                 <i className="fa-solid fa-pen-to-square mx-3 text-green-600 cursor-pointer"
