@@ -14,7 +14,7 @@ function Table() {
                 <input type="checkbox" onClick={() => toggleTaskChecked(index)} className={`mx-2 my-4`} checked={item.checked}/>
                 <span className={`${item.checked ? 'line-through' : ''}`}>{item.task}</span>
               </td>
-              <td className="px-3 py-2 flex md:flex-row">
+              <td className="px-3 py-2 flex md:flex-row mt-4">
                 <i className="fa-solid fa-pen-to-square mx-3 text-green-600 cursor-pointer"
                   onClick={() => {
                     const newTask = prompt("Edit Task:", item.task);
